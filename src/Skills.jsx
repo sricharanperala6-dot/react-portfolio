@@ -1,15 +1,24 @@
 import { useEffect, useRef } from "react";
 import { skills } from "./mock";
 import {
-  Code2,
-  Layers,
+  Monitor,
   Palette,
+  Layers,
+  Database,
+  Plug,
   Wrench,
-  TestTube2,
-  Server,
+  Globe,
 } from "lucide-react";
 
-const ICONS = [Code2, Layers, Palette, Wrench, TestTube2, Server];
+const ICONS = [
+  Monitor,   // Frontend Technologies
+  Palette,   // Styling & UI Frameworks
+  Layers,    // State Management
+  Database,  // Backend & Database
+  Plug,      // APIs & Integration
+  Wrench,    // Development Tools
+  Globe,     // Third-Party Integrations
+];
 
 const Skills = () => {
   const ref = useRef(null);
