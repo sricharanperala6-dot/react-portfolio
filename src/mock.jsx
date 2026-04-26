@@ -11,7 +11,7 @@ export const personal = {
   email: "sricharanperala6@gmail.com",
   phone: "+91 88857 36090",
   availability: "Immediate joiner / negotiable notice period",
-  resumeUrl: "/Sricharan_Perala.pdf",
+  resumeUrl: "/react-portfolio/Sricharan_Perala-Resume.pdf",
   socials: {
     github: "https://github.com/sricharanperala6-dot",
     linkedin: "https://www.linkedin.com/in/sricharan-perala-7b8181392/",
