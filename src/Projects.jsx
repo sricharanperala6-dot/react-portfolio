@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { projects } from "./mock";
 import { ArrowUpRight, Star  } from "lucide-react";
 import { AiFillGithub } from "react-icons/ai";
@@ -38,12 +38,12 @@ const Projects = () => {
               <span className="font-mono">Projects</span>
             </div>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.05] tracking-tight text-[#ececea] reveal">
-              Recent <span className="italic text-[#d4ff3a]">work.</span>
+              Work <span className="italic text-[#d4ff3a]">Highlights.</span>
             </h2>
           </div>
 
           {/* Filter */}
-          <div className="inline-flex items-center p-1 rounded-lg border border-white/10 bg-white/[0.02] reveal">
+          {/* <div className="inline-flex items-center p-1 rounded-lg border border-white/10 bg-white/[0.02] reveal">
             {["all", "featured"].map((f) => (
               <button
                 key={f}
@@ -57,7 +57,7 @@ const Projects = () => {
                 {f}
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -68,7 +68,7 @@ const Projects = () => {
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               {/* Image */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-[#1a1a1d]">
+              {/* <div className="relative aspect-[16/10] overflow-hidden bg-[#1a1a1d]">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -84,7 +84,7 @@ const Projects = () => {
                 <span className="absolute top-4 right-4 font-mono text-[10px] text-[#ececea]/70 px-2 py-1 rounded-md bg-black/40 backdrop-blur">
                   {p.year}
                 </span>
-              </div>
+              </div> */}
 
               {/* Body */}
               <div className="p-6">
@@ -93,20 +93,28 @@ const Projects = () => {
                     {p.title}
                   </h3>
                   <div className="flex gap-2 shrink-0">
-                    <a
-                      href={p.github}
-                      className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#ececea] hover:border-white/30 transition-colors"
-                      aria-label="GitHub"
-                    >
-                      <AiFillGithub className="w-4 h-4" />
-                    </a>
-                    <a
-                      href={p.live}
-                      className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#d4ff3a] hover:border-[#d4ff3a]/40 transition-colors"
-                      aria-label="Live site"
-                    >
-                      <ArrowUpRight className="w-4 h-4" />
-                    </a>
+                    {p.github !== "#" && (
+                      <a
+                        href={p.github}
+                        className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#ececea] hover:border-white/30 transition-colors"
+                        aria-label="GitHub"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <AiFillGithub className="w-4 h-4" />
+                      </a>
+                    )}
+                    {p.live !== "#" && (
+                      <a
+                        href={p.live}
+                        className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#d4ff3a] hover:border-[#d4ff3a]/40 transition-colors"
+                        aria-label="Live site"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <ArrowUpRight className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
                 </div>
                 <p className="text-[#9c9c98] text-sm leading-relaxed mb-4">

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowDownRight, Download, MapPin } from "lucide-react";
 import { personal } from "./mock";
 import { AiFillGithub } from "react-icons/ai";
@@ -78,14 +78,14 @@ const Hero = () => {
           >
             {personal.firstName}
             <br />
-            <span className="italic text-[#d4ff3a]">{personal.lastName}.</span>
+            <span className="italic text-[#d4ff3a]">{personal.lastName}</span>
           </h1>
 
           <p
             className="text-xl md:text-2xl text-[#ececea]/90 max-w-2xl mb-3"
             style={{ animation: "fadeUp 1s ease .25s both" }}
           >
-            Building delightful{" "}
+            Delivering delightful{" "}
             <span className="text-[#d4ff3a] font-medium cursor-blink">{typed}</span>
           </p>
           <p
@@ -127,15 +127,24 @@ const Hero = () => {
             </div>
             <div className="hidden md:block w-px h-4 bg-white/10" />
             <div className="flex items-center gap-3">
-              <a href={personal.socials.github} className="hover:text-[#d4ff3a] transition-colors" aria-label="GitHub">
-                <AiFillGithub className="w-5 h-5" />
-              </a>
-              <a href={personal.socials.linkedin} className="hover:text-[#d4ff3a] transition-colors" aria-label="LinkedIn">
-                <FaLinkedin className="w-5 h-5" />
-              </a>
-              <a href={personal.socials.twitter} className="hover:text-[#d4ff3a] transition-colors" aria-label="Twitter">
-                <FaTwitter className="w-5 h-5" />
-              </a>
+              {[
+                { icon: AiFillGithub, href: personal.socials.github, label: "GitHub" },
+                { icon: FaLinkedin, href: personal.socials.linkedin, label: "LinkedIn" },
+                { icon: FaTwitter, href: personal.socials.twitter, label: "Twitter" },
+              ]
+                .filter(({ href }) => href)
+                .map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    className="hover:text-[#d4ff3a] transition-colors"
+                    aria-label={label}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                ))}
             </div>
           </div>
         </div>
@@ -146,45 +155,40 @@ const Hero = () => {
           style={{ animation: "fadeUp 1s ease .55s both" }}
         >
           <div className="rounded-xl border border-white/10 bg-[#121214]/80 backdrop-blur overflow-hidden shadow-2xl">
-            {/* <div className="flex items-center gap-2 px-4 h-9 border-b border-white/5 bg-white/[0.02]">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-              <span className="ml-3 font-mono text-[11px] text-[#6b6b68]">sricharan.tsx</span>
-            </div> */}
-            {/* <pre className="p-5 font-mono text-[12.5px] leading-relaxed text-[#cfcfcb] whitespace-pre-wrap"> */}
-{/* {`const developer =
-{
-  "status": 200,
-  "developer": "Sricharan",
-  "skills": ["React", "Next", "TypeScript"],
-  "hireable": true
-}
-
-export default developer;`} */}
-            {/* </pre> */}
             <div className="rounded-xl border border-white/10 bg-[#121214]/80 backdrop-blur overflow-hidden shadow-2xl">
   <div className="flex items-center gap-2 px-4 h-9 border-b border-white/5 bg-white/[0.02]">
-    {/* <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-    <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-    <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" /> */}
     <span className="ml-3 font-mono text-[11px] text-[#6b6b68]">FrontEnd.jsx</span>
   </div>
 
   <pre className="p-5 font-mono text-[12.5px] leading-relaxed text-[#cfcfcb] whitespace-pre-wrap">
-{`const [developer] = useState({
-  name: "Sricharan",
-  role: "Frontend Developer",
-  skills: ["React", "Next.js", "TypeScript"],
-  hireable: true
-});
+{`import { useState, useEffect } from "react";
 
-<DeveloperProfile
-  name={developer.name}
-  role={developer.role}
-  skills={developer.skills}
-  available={developer.hireable}
-/>`}
+export default function App() {
+  const [developer, setDeveloper] = useState({
+    name: "Sricharan",
+    experience: "3+ Years",
+    role: "Frontend Development",
+    skills: ["React.js","Redux","React Native",    
+    "TypeScript","Next.js"],
+    isHired: false,
+    status: "Initializing profile..."
+  });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDeveloper((prev) => ({
+        ...prev,
+        isHired: true,
+        status: "Building scalable
+        and user-focused React applications",
+        skills: [...prev.skills, 
+        "Node.js","Express.js]
+      }));
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+}`}
   </pre>
 </div>
           </div>

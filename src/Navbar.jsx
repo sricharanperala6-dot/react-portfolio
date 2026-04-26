@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, Code2 } from "lucide-react";
 
 const NAV_ITEMS = [
@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { id: "projects", label: "Projects", num: "04" },
   { id: "experience", label: "Experience", num: "05" },
   { id: "why-hire-me", label: "Hire Me", num: "06" },
-  { id: "contact", label: "Contact", num: "06" },
+  { id: "contact", label: "Contact", num: "07" },
 ];
 
 const Navbar = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { experience } from "./mock";
 import { Briefcase, MapPin } from "lucide-react";
 
@@ -32,7 +32,7 @@ const Experience = () => {
             <span className="font-mono">Experience</span>
           </div>
           <h2 className="font-display text-5xl md:text-6xl leading-[1.05] tracking-tight text-[#ececea] reveal">
-            Career <span className="italic text-[#d4ff3a]">timeline.</span>
+            Career <span className="italic text-[#d4ff3a]">Timeline.</span>
           </h2>
         </div>
 

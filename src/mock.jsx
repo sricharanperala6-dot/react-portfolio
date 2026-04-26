@@ -1,243 +1,239 @@
-// Mock data for Sricharan Perala - Frontend Developer Portfolio
-// This file contains all placeholder content. Backend integration will replace these later.
+// Portfolio content for Sricharan Perala.
 
 export const personal = {
   name: "Sricharan Perala",
   firstName: "Sricharan",
   lastName: "Perala",
-  role: "Frontend Developer",
-  tagline: "I craft pixel-perfect, performant interfaces — where design meets engineering.",
+  role: "React.js Frontend Developer",
+  tagline:
+    "I build scalable, responsive web and mobile products with React, React Native, Redux, REST APIs, GraphQL, modern UI systems, and third-party integrations.",
   location: "Hyderabad, India",
-  email: "sricharan.perala@example.com",
-  phone: "+91 98765 43210",
-  availability: "Available for freelance & full-time roles",
-  resumeUrl: "#",
+  email: "sricharanperala6@gmail.com",
+  phone: "+91 88857 36090",
+  availability: "Immediate joiner / negotiable notice period",
+  resumeUrl: "/Sricharan_Perala.pdf",
   socials: {
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/",
-    twitter: "https://twitter.com/",
-    dribbble: "https://dribbble.com/"
-  }
+    github: "https://github.com/sricharanperala6-dot",
+    linkedin: "https://www.linkedin.com/in/sricharan-perala-7b8181392/",
+    instagram:"https://www.instagram.com/sricharan_perala/",
+  },
 };
 
 export const stats = [
-  { value: "3+", label: "Years Experience" },
-  { value: "24", label: "Projects Shipped" },
-  { value: "18", label: "Happy Clients" },
-  { value: "99%", label: "Lighthouse Score" }
+  { value: "3", label: "Years Experience" },
+  { value: "70%", label: "Frontend Ownership" },
+  { value: "40%", label: "UI Engagement Lift" },
+  { value: "50%", label: "Manual Effort Reduced" },
 ];
 
 export const aboutParagraphs = [
-  "Hi, I'm Sricharan — a frontend developer obsessed with the small details that make interfaces feel alive. I specialize in building scalable design systems, accessible component libraries, and smooth motion-rich web experiences using React, TypeScript, and modern CSS.",
-  "Over the past three years I've worked with startups and product teams to ship features used by thousands of users. I care deeply about performance, accessibility, and the craft of writing clean, maintainable code. When I'm not coding, you'll find me exploring type design, contributing to open source, or brewing a fresh cup of filter coffee."
+  "I am a React.js Frontend Developer with 3 years of experience building scalable, responsive, and high-performance web and mobile applications. My day-to-day work spans React.js, React Native, JavaScript, TypeScript, Redux, REST APIs, GraphQL, and modern UI development.",
+  "At CloudFirst Computing, I have worked across enterprise and community platforms, building CMS-driven React pages, mobile experiences, dynamic forms, dashboards, real-time chat integrations, secure media uploads, and Stripe payment workflows. I enjoy turning business requirements into clean, reliable user experiences that work well across devices.",
 ];
 
 export const skills = [
   {
-    category: "Languages",
-    items: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Python"]
+    category: "Frontend Technologies",
+    items: [
+      "ReactJS",
+      "React Native",
+      "VueJS",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+    ],
   },
   {
-    category: "Frameworks & Libraries",
-    items: ["React", "Next.js", "Vue.js", "Redux Toolkit", "React Query", "Zustand"]
+    category: "Styling & UI Frameworks",
+    items: [
+      "Styled-Components",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Responsive Design",
+      "Media Queries",
+    ],
+  },
+    {
+    category: "State Management",
+    items: [
+      "Redux",
+      "Redux-Persist",
+      "Context API",
+    ],
+  },
+      {
+    category: "Backend & Database",
+    items: [
+      "Node.js",
+      "Express.js",
+      "MySQL",
+    ],
   },
   {
-    category: "Styling & UI",
-    items: ["Tailwind CSS", "Sass/SCSS", "Styled Components", "Framer Motion", "shadcn/ui"]
+    category: "APIs & Integration",
+    items: [
+      "REST APIs",
+      "GraphQL",
+      "Axios",
+      "CRUD Operations",
+    ],
   },
   {
-    category: "Tools & Platforms",
-    items: ["Git & GitHub", "Vite", "Webpack", "Figma", "Vercel", "Docker"]
+    category: "Development Tools",
+    items: [
+      "Git",
+      "Bitbucket",
+      "Jira",
+      "VSCode",
+      "Postman",
+      "Swagger",
+    ],
   },
   {
-    category: "Testing & Quality",
-    items: ["Jest", "React Testing Library", "Cypress", "Playwright", "Storybook"]
+    category: "Third-Party Integrations",
+    items: [
+      "npm Packages",
+      "CometChat",
+      "StreamChat",
+      "Stripe",
+    ],
   },
   {
-    category: "Backend Familiarity",
-    items: ["Node.js", "Express", "REST APIs", "GraphQL", "Firebase", "MongoDB"]
-  }
+    category: "Testing & Optimization",
+    items: [
+      "React Testing",
+      "Performance Optimization",
+      "Cross-Browser Compatibility",
+    ],
+  },
 ];
 
 export const projects = [
-  {
+   {
     id: 1,
-    title: "Nimbus Analytics Dashboard",
+    title: "Vewize",
     description:
-      "A real-time analytics platform with customizable widgets, dark mode, and drag-and-drop layouts. Built for a fintech startup to visualize transaction flows.",
-    tech: ["React", "TypeScript", "D3.js", "Tailwind", "WebSockets"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop",
+      "Dual-role mentorship platform where users can act as mentors and mentees, purchase courses with coins, and manage event or meeting sessions across responsive mobile, tablet, and desktop layouts.",
+    tech: ["React.js", "Responsive Design", "Flexbox", "CSS Grid", "Reusable Components"],
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80&auto=format&fit=crop",
     live: "#",
     github: "#",
     year: "2024",
-    featured: true
+    featured: false,
   },
   {
     id: 2,
-    title: "Lumen Design System",
+    title: "Ingaje",
     description:
-      "An open-source component library with 40+ accessible primitives, theming tokens, and Storybook documentation — used by internal teams across 5 products.",
-    tech: ["React", "TypeScript", "Radix UI", "Storybook"],
-    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1200&q=80&auto=format&fit=crop",
+      "Employee engagement and workforce management platform covering recruitment to retirement. Led nearly 70% of frontend module development, including HealthPlus, HirePlus, posts, articles, surveys, polls, courses, dashboards, and optimized infinite-scroll feeds.",
+    tech: ["React.js", "Redux", "React Router", "Bootstrap", "Tailwind CSS", "ApexCharts", "AWS S3"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80&auto=format&fit=crop",
+    live: "#",
+    github: "#",
+    year: "2025",
+    featured: true,
+  },
+    {
+    id: 3,
+    title: "Drive and Park MCO",
+    description:
+      "Parking reservation platform with responsive slot selection, scheduling, booking management, Stripe payments, coupon flows, real-time availability, live parking dashboards, and QR-based check-in/check-out.",
+    tech: ["React.js", "Redux", "React Router", "Bootstrap", "Tailwind CSS", "Stripe", "REST APIs"],
+    image: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=1200&q=80&auto=format&fit=crop",
     live: "#",
     github: "#",
     year: "2024",
-    featured: true
-  },
-  {
-    id: 3,
-    title: "Orbit — Social Journaling App",
-    description:
-      "A mobile-first PWA for shared daily journaling with friends. Features offline sync, rich text editor, and end-to-end encrypted entries.",
-    tech: ["Next.js", "Tiptap", "IndexedDB", "Framer Motion"],
-    image: "https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200&q=80&auto=format&fit=crop",
-    live: "#",
-    github: "#",
-    year: "2023",
-    featured: true
+    featured: true,
   },
   {
     id: 4,
-    title: "Cascade — Markdown Editor",
+    title: "Salty Dawg Sailing Association",
     description:
-      "A minimalist markdown editor with live preview, vim bindings, and keyboard-first navigation. Loved by writers and engineers alike.",
-    tech: ["React", "CodeMirror", "Zustand"],
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&q=80&auto=format&fit=crop",
+      "Member engagement platform with web and mobile apps, event management, rally registrations, dynamic workflows, personalized email notifications, role-based portals, payments, and real-time messaging.",
+    tech: ["React.js", "React Native", "GraphQL", "WordPress", "Stripe", "CometChat", "Stream Chat"],
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80&auto=format&fit=crop",
     live: "#",
     github: "#",
-    year: "2023",
-    featured: false
+    year: "2025",
+    featured: true,
   },
   {
     id: 5,
-    title: "Flux — Portfolio Template",
+    title: "Qennect Multi-Tenant Platform",
     description:
-      "An open-source portfolio template for designers and developers. 3k+ GitHub stars and forks from creatives around the world.",
-    tech: ["Astro", "Tailwind", "MDX"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&auto=format&fit=crop",
+      "Enterprise community collaboration platform spanning web, mobile, public website, and admin portal. Built reusable modules for feeds, posts, events, memberships, groups, forms, message center, email templates, authentication, and role-based access.",
+    tech: ["React.js", "React Native", "GraphQL", "WordPress", "Stripe", "CometChat", "Bootstrap"],
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80&auto=format&fit=crop",
     live: "#",
     github: "#",
-    year: "2022",
-    featured: false
+    year: "2024",
+    featured: false,
   },
-  {
-    id: 6,
-    title: "Atlas — Travel Journal",
-    description:
-      "A location-aware travel journaling app with offline maps, photo galleries, and route tracking. Built for long-term backpackers.",
-    tech: ["React Native", "Mapbox", "SQLite"],
-    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1200&q=80&auto=format&fit=crop",
-    live: "#",
-    github: "#",
-    year: "2022",
-    featured: false
-  }
 ];
 
 export const experience = [
   {
     id: 1,
-    role: "Senior Frontend Developer",
-    company: "Aperture Labs",
-    type: "Full-time",
-    period: "Jan 2024 — Present",
-    location: "Remote",
-    bullets: [
-      "Led the frontend rewrite of the flagship analytics product from Angular to React, reducing bundle size by 38% and time-to-interactive by 2.1s.",
-      "Architected a shared design system consumed by 3 product teams, improving ship velocity by 25%.",
-      "Mentored 4 junior engineers through code reviews, pairing, and weekly tech-talks."
-    ],
-    stack: ["React", "TypeScript", "Tailwind", "Vite"]
-  },
-  {
-    id: 2,
     role: "Frontend Developer",
-    company: "Quillfire Studio",
+    company: "CloudFirst Computing Pvt. Ltd.",
     type: "Full-time",
-    period: "Jun 2022 — Dec 2023",
-    location: "Hyderabad, IN",
+    period: "May 2023 - Present",
+    location: "Hyderabad, India",
     bullets: [
-      "Built marketing and product websites for 10+ SaaS clients with a focus on motion, accessibility, and Core Web Vitals.",
-      "Implemented a headless-CMS-driven blog platform that grew organic traffic 3x within 6 months.",
-      "Collaborated daily with designers to translate Figma handoffs into pixel-accurate, responsive interfaces."
+      "Developed and maintained responsive web and mobile applications using React.js and React Native with strong focus on performance and cross-device compatibility.",
+      "Built CMS-driven React pages using WordPress GraphQL and implemented SSO-based auto sign-up integrations to streamline authentication workflows.",
+      "Integrated Stripe payments, CometChat, Stream Chat, AWS S3 uploads, dynamic forms, validations, dashboards, modals, tables, and pagination modules.",
+      "Implemented Redux and Redux Persist for scalable state management, improving data flow and application stability across enterprise modules.",
+      "Collaborated with stakeholders in Agile environments to convert business requirements into user stories and deliver multiple concurrent projects on schedule.",
     ],
-    stack: ["Next.js", "Sanity CMS", "Framer Motion"]
+    stack: ["React.js", "React Native", "Redux","REST API","GraphQL","Third-party Integrations"],
   },
-  {
-    id: 3,
-    role: "Frontend Engineer Intern",
-    company: "Nordlys Technologies",
-    type: "Internship",
-    period: "Jan 2022 — May 2022",
-    location: "Bengaluru, IN",
-    bullets: [
-      "Shipped 12 features across the customer dashboard, collaborating with backend and design teams in a Scrum setup.",
-      "Wrote 120+ unit and integration tests, raising overall coverage from 61% to 84%.",
-      "Authored the team's internal style guide and onboarding docs for new joiners."
-    ],
-    stack: ["React", "Redux", "Jest"]
-  }
 ];
 
-
-export const testimonials = [
-  {
-    id: 1,
-    name: "Aditi Rao",
-    role: "Product Manager, Aperture Labs",
-    quote:
-      "Sricharan has a rare combination of design sensibility and engineering rigor. He ships fast, yet every detail is considered."
-  },
-  {
-    id: 2,
-    name: "Marcus Lindgren",
-    role: "Design Lead, Quillfire",
-    quote:
-      "The most design-aware engineer I've collaborated with. He notices the 2px misalignment before I do."
-  }
-];
+export const testimonials = [];
 
 export const whyHireMe = [
   {
     id: 1,
     icon: "LayoutTemplate",
-    title: "Build pixel-perfect UIs",
+    title: "Build responsive product UIs",
     text:
-      "I will turn your Figma designs into responsive, production-ready React interfaces — matching every spacing, color, and motion detail across all screen sizes."
+      "I create clean, reusable React interfaces that adapt smoothly across mobile, tablet, and desktop screens.",
   },
   {
     id: 2,
     icon: "Gauge",
-    title: "Optimize performance",
+    title: "Improve performance",
     text:
-      "I will ship pages that score 95+ on Lighthouse — fast load times, smooth animations, lazy-loaded assets, and rock-solid Core Web Vitals."
+      "I optimize API handling, infinite-scroll feeds, component structure, and rendering behavior so applications stay fast and stable.",
   },
   {
     id: 3,
     icon: "Accessibility",
-    title: "Make it accessible to all",
+    title: "Translate requirements clearly",
     text:
-      "I will deliver WCAG AA compliant interfaces with semantic HTML, keyboard navigation, and proper ARIA — so every user can use your product."
+      "I work closely with stakeholders to turn business needs into user stories, UI workflows, and maintainable frontend features.",
   },
   {
     id: 4,
     icon: "Boxes",
-    title: "Build reusable systems",
+    title: "Create reusable modules",
     text:
-      "I will create scalable component libraries and design tokens, so your team ships faster and stays consistent across products."
+      "I build dynamic forms, dashboards, tables, modals, routing flows, and shared UI components that reduce repeat work.",
   },
   {
     id: 5,
     icon: "Bug",
-    title: "Write tested, clean code",
+    title: "Integrate real services",
     text:
-      "I will deliver maintainable code with unit & E2E tests, clear documentation, and code reviews — making future changes painless."
+      "I connect frontend products with REST APIs, GraphQL, WordPress CMS, Stripe, AWS S3, CometChat, and Stream Chat.",
   },
   {
     id: 6,
     icon: "Rocket",
-    title: "Ship reliably & fast",
+    title: "Own delivery",
     text:
-      "I will integrate with your APIs, set up CI/CD, and deploy your product end-to-end — from local commit to production with zero downtime."
-  }
+      "I can manage multiple frontend workstreams in Agile teams and keep quality high while moving features toward release.",
+  },
 ];

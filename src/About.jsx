@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { personal, stats, aboutParagraphs } from "./mock";
 
 const useReveal = () => {
@@ -40,15 +40,15 @@ const About = () => {
           <div className="md:col-span-5 reveal">
             <h2 className="font-display text-5xl md:text-6xl leading-[1.05] tracking-tight text-[#ececea]">
               A developer who{" "}
-              <span className="italic text-[#d4ff3a]">sweats the details.</span>
+              <span className="italic text-[#d4ff3a]">ships usable products.</span>
             </h2>
             <div className="mt-10 p-5 rounded-xl border border-white/10 bg-white/[0.02]">
               <p className="text-xs font-mono uppercase tracking-wider text-[#6b6b68] mb-2">
                 Currently
               </p>
               <p className="text-[#ececea] leading-relaxed">
-                Senior Frontend Developer at{" "}
-                <span className="text-[#d4ff3a]">Aperture Labs</span>. Remote from{" "}
+                Frontend Developer at{" "}
+                <span className="text-[#d4ff3a]">CloudFirst Computing Pvt. Ltd.</span>, based in{" "}
                 {personal.location}.
               </p>
             </div>

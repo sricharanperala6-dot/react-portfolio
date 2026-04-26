@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { whyHireMe } from "./mock";
 import {
   LayoutTemplate,
@@ -77,7 +77,7 @@ const WhyHireMe = () => {
           >
             <p className="text-[#9c9c98] text-base leading-relaxed mb-6">
               When you bring me onto your team or project, here's exactly what
-              you can expect me to deliver — from day one to ship day:
+              you can expect me to deliver from day one to ship day:
             </p>
 
             <div className="flex flex-wrap gap-2">
@@ -85,8 +85,8 @@ const WhyHireMe = () => {
                 "On-time delivery",
                 "Clean code",
                 "Clear communication",
-                "Bug-free",
-                "Future-proof",
+                "Reusable UI",
+                "Production focus",
               ].map((tag) => (
                 <span
                   key={tag}
@@ -130,7 +130,7 @@ const WhyHireMe = () => {
           })}
         </div>
 
-        <div
+        {/* <div
           className="reveal mt-14 rounded-2xl border border-white/10 bg-gradient-to-br from-[#121214] to-[#0e0e10] p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
           style={{ transitionDelay: "200ms" }}
         >
@@ -152,7 +152,7 @@ const WhyHireMe = () => {
             Get in touch
             <ArrowDownRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

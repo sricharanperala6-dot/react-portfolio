@@ -1,8 +1,8 @@
-import React from "react";
 import { personal } from "./mock"
 import { ArrowUp, Heart} from "lucide-react";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa6";
 
 const Footer = () => {
@@ -18,8 +18,8 @@ const Footer = () => {
             {personal.name}
           </h3>
           <p className="text-sm text-[#9c9c98] max-w-sm">
-            Frontend developer crafting interfaces where design and engineering
-            meet.
+            React.js frontend developer building responsive web and mobile
+            products.
           </p>
         </div>
 
@@ -50,27 +50,24 @@ const Footer = () => {
             Elsewhere
           </p>
           <div className="flex items-center gap-3">
-            <a
-              href={personal.socials.github}
-              aria-label="GitHub"
-              className="w-10 h-10 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#d4ff3a] hover:border-[#d4ff3a]/40 transition-all"
-            >
-              <AiFillGithub className="w-4 h-4" />
-            </a>
-            <a
-              href={personal.socials.linkedin}
-              aria-label="LinkedIn"
-              className="w-10 h-10 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#d4ff3a] hover:border-[#d4ff3a]/40 transition-all"
-            >
-              <FaLinkedin className="w-4 h-4" />
-            </a>
-            <a
-              href={personal.socials.twitter}
-              aria-label="Twitter"
-              className="w-10 h-10 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#d4ff3a] hover:border-[#d4ff3a]/40 transition-all"
-            >
-              <FaTwitter className="w-4 h-4" />
-            </a>
+            {[
+              { icon: AiFillGithub, href: personal.socials.github, label: "GitHub" },
+              { icon: FaLinkedin, href: personal.socials.linkedin, label: "LinkedIn" },
+              { icon: BsInstagram, href: personal.socials.instagram, label: "Instagram" },
+            ]
+              .filter(({ href }) => href)
+              .map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#d4ff3a] hover:border-[#d4ff3a]/40 transition-all"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
           </div>
           <a
             href={`mailto:${personal.email}`}
@@ -83,9 +80,10 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-xs font-mono text-[#6b6b68] flex items-center gap-1.5">
-          © {new Date().getFullYear()} {personal.name}. Crafted with
+          © {new Date().getFullYear()} {personal.name}
+           {/* Crafted with
           <Heart className="w-3 h-3 text-[#d4ff3a] fill-[#d4ff3a]" />
-          and lots of coffee.
+          and lots of coffee. */}
         </p>
         <button
           onClick={scrollTop}

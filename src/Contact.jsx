@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { personal } from "./mock";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
@@ -35,7 +35,7 @@ const Contact = () => {
       return;
     }
     setSubmitting(true);
-    // Mock submission — will be replaced with backend call later
+    // Mock submission; replace with a backend call when a contact API is added.
     setTimeout(() => {
       const saved = JSON.parse(localStorage.getItem("contactMessages") || "[]");
       saved.push({ ...form, ts: new Date().toISOString() });
@@ -60,12 +60,11 @@ const Contact = () => {
               <span className="font-mono">Contact</span>
             </div>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.05] tracking-tight text-[#ececea] reveal mb-6">
-              Let's build something{" "}
+              Let’s create scalable products{" "}
               <span className="italic text-[#d4ff3a]">together.</span>
             </h2>
             <p className="text-[#9c9c98] text-lg leading-relaxed mb-10 reveal" style={{ transitionDelay: "100ms" }}>
-              Have a project in mind, a role to discuss, or just want to say hi?
-              Drop a message — I usually reply within 24 hours.
+              If you have a role to discuss, a project opportunity, or would like to connect, feel free to reach out. I typically respond within 24 hours
             </p>
 
             <div className="space-y-4 reveal" style={{ transitionDelay: "180ms" }}>
@@ -99,22 +98,26 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="mt-8 flex items-center gap-3 reveal" style={{ transitionDelay: "260ms" }}>
+            {/* <div className="mt-8 flex items-center gap-3 reveal" style={{ transitionDelay: "260ms" }}>
               {[
                 { icon: AiFillGithub, href: personal.socials.github, label: "GitHub" },
                 { icon: FaLinkedin, href: personal.socials.linkedin, label: "LinkedIn" },
                 { icon: FaTwitter, href: personal.socials.twitter, label: "Twitter" },
-              ].map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="w-10 h-10 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#d4ff3a] hover:border-[#d4ff3a]/40 transition-all"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
+              ]
+                .filter(({ href }) => href)
+                .map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 rounded-md border border-white/10 flex items-center justify-center text-[#9c9c98] hover:text-[#d4ff3a] hover:border-[#d4ff3a]/40 transition-all"
+                  >
+                    <Icon className="w-4 h-4" />
+                  </a>
+                ))}
+            </div> */}
           </div>
 
           {/* Right - Form */}
@@ -124,10 +127,10 @@ const Contact = () => {
             style={{ transitionDelay: "120ms" }}
           >
             <div className="grid md:grid-cols-2 gap-5">
-              <Field label="Name" name="name" value={form.name} onChange={handleChange} placeholder="Jane Doe" />
-              <Field label="Email" name="email" type="email" value={form.email} onChange={handleChange} placeholder="jane@company.com" />
+              <Field label="Name" name="name" value={form.name} onChange={handleChange} placeholder="Your full name" />
+              <Field label="Email" name="email" type="email" value={form.email} onChange={handleChange} placeholder="your.email@example.com" />
             </div>
-            <Field label="Subject" name="subject" value={form.subject} onChange={handleChange} placeholder="Let's work on a project" />
+            <Field label="Subject" name="subject" value={form.subject} onChange={handleChange} placeholder="Job opportunity / Hiring inquiry" />
             <div>
               <label className="block text-[11px] font-mono uppercase tracking-wider text-[#6b6b68] mb-2">
                 Message
@@ -137,7 +140,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 rows={6}
-                placeholder="Tell me about your project..."
+                placeholder="Share the role details, company name, and requirements..."
                 className="w-full px-4 py-3 rounded-lg bg-[#0a0a0b] border border-white/10 text-[#ececea] placeholder:text-[#5a5a57] focus:outline-none focus:border-[#d4ff3a]/50 focus:ring-2 focus:ring-[#d4ff3a]/15 transition-all resize-none"
               />
             </div>

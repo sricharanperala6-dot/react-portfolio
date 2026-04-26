@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { skills } from "./mock";
 import {
   Code2,
@@ -41,16 +41,16 @@ const Skills = () => {
               <span className="font-mono">Skills</span>
             </div>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.05] tracking-tight text-[#ececea] reveal">
-              Tools of the <span className="italic text-[#d4ff3a]">trade.</span>
+              Technology <span className="italic text-[#d4ff3a]">Stack.</span>
             </h2>
           </div>
           <p className="max-w-md text-[#9c9c98] text-base reveal" style={{ transitionDelay: "120ms" }}>
-            A curated stack I reach for daily — battle-tested across startups,
-            design systems, and large-scale production apps.
+            A practical stack I use across responsive products, enterprise
+            dashboards, mobile apps, API integrations, and production UI flows.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {skills.map((group, idx) => {
             const Icon = ICONS[idx % ICONS.length];
             return (
