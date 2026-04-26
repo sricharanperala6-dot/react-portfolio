@@ -5,11 +5,48 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { Send, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const ref = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!form.name || !form.email || !form.message) {
+      toast.error("Please fill in name, email & message.");
+      return;
+    }
+
+    setSubmitting(true);
+
+    try {
+      await emailjs.send(
+        "service_k23yql8",     // EmailJS service id
+        "template_pqxsilp",    // EmailJS template id
+       {
+    name: `${form.name} (${form.email})`, // Name + Email together
+    title: `${form.subject} (${form.message})`,                    // Subject in title field
+  },
+        "PKHU7RtqOExf7gie0"      // EmailJS public key
+      );
+
+      toast.success("Message sent successfully!");
+      setForm({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("Failed to send message.");
+    }
+
+    setSubmitting(false);
+  };
 
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -28,23 +65,6 @@ const Contact = () => {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
-      toast.error("Please fill in name, email & message.");
-      return;
-    }
-    setSubmitting(true);
-    // Mock submission; replace with a backend call when a contact API is added.
-    setTimeout(() => {
-      const saved = JSON.parse(localStorage.getItem("contactMessages") || "[]");
-      saved.push({ ...form, ts: new Date().toISOString() });
-      localStorage.setItem("contactMessages", JSON.stringify(saved));
-      toast.success("Message sent! I'll get back within 24 hours.");
-      setForm({ name: "", email: "", subject: "", message: "" });
-      setSubmitting(false);
-    }, 900);
-  };
 
   return (
     <section
